@@ -8,6 +8,9 @@ export default {
 
         return client.get(`/restaurants${filter}`);
     },
+    fetchRestaurant: (id) => {
+        return client.get(`restaurants/${id}`);
+    },
     searchRestaurants: (search) => {
         return client.get(`/restaurants/search?q=${search}`);
     },

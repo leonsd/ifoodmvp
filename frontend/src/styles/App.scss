@@ -2,7 +2,7 @@
 
 @import "~bulma/sass/utilities/functions";
 
-@import "./styles/custom_colors.scss";
+@import "custom_colors.scss";
 
 $custom-colors: ("custom-green-darker": ($custom-green-darker),
 "custom-green-lighter": ($custom-green-lighter),
@@ -25,4 +25,13 @@ $custom-colors: ("custom-green-darker": ($custom-green-darker),
     border: 1px dashed $custom-gray;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.modal_root {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
 }
