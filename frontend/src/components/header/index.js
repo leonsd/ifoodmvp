@@ -5,7 +5,7 @@ import { Navbar, Container, Icon } from 'rbx';
 import { FaCrosshairs } from 'react-icons/fa';
 
 import LogoImage from 'assets/images/logo-v1-horizontal.png';
-import SearchBox from 'components/search_box';
+import SearchBox from 'components/search-box';
 import { showModal } from 'store/actions/modal';
 
 import 'styles/header.scss';

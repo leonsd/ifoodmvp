@@ -9,7 +9,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import api from 'services/api';
 import { fetchRestaurants } from 'store/actions/restaurant';
-import slickSettings from './slick_settings';
+import slickSettings from './slick-settings';
 import 'styles/categories.scss';
 
 function Categories(props) {

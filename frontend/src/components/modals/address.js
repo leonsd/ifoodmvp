@@ -4,6 +4,8 @@ import { Box, Column, Icon } from 'rbx';
 import { bindActionCreators } from 'redux';
 import { FaTimes } from 'react-icons/fa';
 
+import AddressForm from 'components/address-form';
+
 import { hideModal } from 'store/actions/modal';
 
 function AddressModal(props) {
@@ -18,11 +20,7 @@ function AddressModal(props) {
                             </Icon>
                         </Column>
                     </Column.Group>
-                    <Column.Group>
-                        <Column size={12}>
-                            Meu modal
-                        </Column>
-                    </Column.Group>
+                    <AddressForm />
                 </Box>
             </Column>
         </Column.Group>

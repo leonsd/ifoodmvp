@@ -1,9 +1,9 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from './screens/home';
-import Restaurants from './screens/restaurants';
-import ShowRestaurant from './screens/show_restaurant';
+import Home from 'screens/home';
+import Restaurants from 'screens/restaurants';
+import ShowRestaurant from 'screens/show-restaurant';
 
 const Routes = () => (
     <BrowserRouter>

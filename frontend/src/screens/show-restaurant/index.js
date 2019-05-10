@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Title, Box, Column, Image, Icon } from 'rbx';
 import { FaStar } from 'react-icons/fa';
 
-import CategoryProducts from 'components/category_products';
+import CategoryProducts from 'components/category-products';
 import api from 'services/api';
 
 export default function ShowRestaurant(props) {
