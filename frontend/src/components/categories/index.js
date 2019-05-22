@@ -21,7 +21,7 @@ function Categories(props) {
     };
 
     const filterByCategory = (category) => {
-        props.fetchRestaurants(category);
+        props.fetchRestaurants(props.address, category);
     };
 
     useEffect(() => {
@@ -49,8 +49,14 @@ function Categories(props) {
     );
 }
 
+const mapStateToProps = (state) => {
+    const { address } = state;
+
+    return { address };
+};
+
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({ fetchRestaurants }, dispatch);
 };
 
-export default connect(null, mapDispatchToProps)(Categories);
+export default connect(mapStateToProps, mapDispatchToProps)(Categories);

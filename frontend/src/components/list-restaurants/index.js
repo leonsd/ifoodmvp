@@ -12,6 +12,11 @@ function ListRestaurants({ restaurants, ...props }) {
         props.fetchRestaurants();
     }, []); // eslint-disable-line
 
+
+    useEffect(() => {
+        props.fetchRestaurants(props.address);
+    }, [props.address]); // eslint-disable-line
+
     return (
         <div className="restaurants-list">
             <h2 className="title is-size-4">Restaurantes</h2>
@@ -26,9 +31,12 @@ function ListRestaurants({ restaurants, ...props }) {
 }
 
 const mapStateToProps = (state) => {
-    const { restaurants } = state;
+    const { address, restaurants } = state;
 
-    return { restaurants };
+    return {
+        address: address.address,
+        restaurants,
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {

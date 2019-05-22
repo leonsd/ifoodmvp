@@ -3,10 +3,12 @@ import axios from 'axios';
 const client = axios.create({ baseURL: 'http://localhost:3001' });
 
 export default {
-    fetchRestaurants: (category) => {
-        const filter = category ? `?category=${category.title}` : '';
+    fetchRestaurants: (address, category) => {
+        console.log('address: ', address);
+        const cityParams = (address && address.city !== undefined) ? `city=${address.city}` : '';
+        const categoryParams = (category !== null) ? `&category=${category.title}` : '';
 
-        return client.get(`/restaurants${filter}`);
+        return client.get(`/restaurants?${cityParams}${categoryParams}`);
     },
     fetchRestaurant: (id) => {
         return client.get(`restaurants/${id}`);

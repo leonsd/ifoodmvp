@@ -2,10 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import addressModal from './address';
+import addProductModal from './add-product';
 
 function ModalRoot({ modal }) {
     const modals = {
         ADDRESS: addressModal,
+        ADD_PRODUCT: addProductModal,
     };
 
     if (!modal.type) {

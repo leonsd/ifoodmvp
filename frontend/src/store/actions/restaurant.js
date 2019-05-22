@@ -1,9 +1,9 @@
 import api from 'services/api';
 import { FETCH_RESTAURANTS } from './types';
 
-export const fetchRestaurants = (category = null) => {
+export const fetchRestaurants = (address = null, category = null) => {
     return async (dispatch) => {
-        const response = await api.fetchRestaurants(category);
+        const response = await api.fetchRestaurants(address, category);
         dispatch({
             type: FETCH_RESTAURANTS,
             restaurants: response.data.restaurants,

@@ -33,16 +33,21 @@ export default function ShowRestaurant(props) {
                                 <Icon size="medium" color="warning">
                                     <FaStar />
                                 </Icon>
-                                <span className="has-text-warning has-text-weight-bold">{restaurant.review || 0}</span>
+                                <span className="has-text-warning has-text-weight-bold">
+                                    {restaurant.review || 0}
+                                </span>
                             </span>
                         </footer>
                     </Column>
                 </Column.Group>
             </Box>
 
-            {restaurant.product_categories && restaurant.product_categories.map((category) => {
-                return <CategoryProducts {...category} key={category.id} />;
-            })}
+            {restaurant.product_categories
+                && restaurant.product_categories.map((category) => {
+                    return (
+                        <CategoryProducts restaurant={restaurant} {...category} key={category.id} />
+                    );
+                })}
         </Fragment>
     );
 }
