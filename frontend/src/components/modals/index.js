@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 
 import addressModal from './address';
 import addProductModal from './add-product';
+import orderModal from './order';
 
 function ModalRoot({ modal }) {
     const modals = {
         ADDRESS: addressModal,
         ADD_PRODUCT: addProductModal,
+        ORDER: orderModal,
     };
 
     if (!modal.type) {

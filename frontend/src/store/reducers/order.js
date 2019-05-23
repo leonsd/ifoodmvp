@@ -1,4 +1,5 @@
-import { ADD_ORDER_ITEM } from 'store/actions/types';
+/* eslint-disable prefer-destructuring */
+import { ADD_ORDER_ITEM, REMOVE_ORDER_ITEM, FETCH_ORDER } from 'store/actions/types';
 
 export default (state = { restaurant: [], order: [] }, action) => {
     switch (action.type) {
@@ -18,6 +19,23 @@ export default (state = { restaurant: [], order: [] }, action) => {
             return {
                 ...state,
                 restaurant: action.restaurant,
+                order,
+            };
+        }
+        case REMOVE_ORDER_ITEM: {
+            const indexToRemove = state.order.indexOf(action.orderItem);
+            const newOrder = [...state.order];
+            newOrder.splice(indexToRemove, 1);
+
+            return {
+                ...state,
+                order: newOrder,
+            };
+        }
+        case FETCH_ORDER: {
+            const { order } = action;
+            return {
+                ...state,
                 order,
             };
         }

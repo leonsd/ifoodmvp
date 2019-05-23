@@ -2,28 +2,28 @@
 @import "./custom_colors";
 
 div.top-navbar {
-  background-color: $white;
-  border-bottom: 1px solid $custom-gray;
+    background-color: $white;
+    border-bottom: 1px solid $custom-gray;
 
-  nav.navbar {
-    height: 70px;
+    nav.navbar {
+        height: 70px;
 
-    navbar{
-      z-index: 1;
+        navbar {
+            z-index: 1;
+        }
+
+        .navbar-brand {
+            height: 100%;
+            z-index: 1;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .navbar-item.navbar-center {
+            flex-grow: 1;
+            justify-content: center;
+        }
     }
-
-    .navbar-brand {
-      height: 100%;
-      z-index: 1;
-
-      img {
-        height: 100%;
-      }
-    }
-
-    .navbar-item.navbar-center {
-      flex-grow: 1;
-      justify-content: center;
-    }
-  }
 }
